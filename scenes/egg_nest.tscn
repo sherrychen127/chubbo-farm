@@ -1,0 +1,52 @@
+[gd_scene format=3 uid="uid://ms5yxy45mfn"]
+
+[ext_resource type="Script" uid="uid://l1bt7mkjc0tt" path="res://scripts/egg_nest.gd" id="1_qcief"]
+[ext_resource type="Texture2D" uid="uid://djxanfcgcrm4k" path="res://assets/Outdoor decoration/Nests.png" id="1_xiptd"]
+[ext_resource type="Resource" uid="uid://b8ybyt0v7x1j2" path="res://resources/animal_products/egg.tres" id="2_gfqfv"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_qcief"]
+atlas = ExtResource("1_xiptd")
+region = Rect2(16, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_gfqfv"]
+atlas = ExtResource("1_xiptd")
+region = Rect2(16, 16, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_xiptd"]
+atlas = ExtResource("1_xiptd")
+region = Rect2(16, 32, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_6n7uj"]
+atlas = ExtResource("1_xiptd")
+region = Rect2(16, 48, 16, 16)
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_xiptd"]
+radius = 4.1231055
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_qcief"]
+radius = 11.045361
+
+[node name="EggNest" type="StaticBody2D" unique_id=174743682]
+z_index = -1
+script = ExtResource("1_qcief")
+egg_item = ExtResource("2_gfqfv")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=251214987]
+texture = SubResource("AtlasTexture_qcief")
+
+[node name="Egg1" type="Sprite2D" parent="." unique_id=95296149]
+texture = SubResource("AtlasTexture_gfqfv")
+
+[node name="Egg2" type="Sprite2D" parent="." unique_id=112251393]
+texture = SubResource("AtlasTexture_xiptd")
+
+[node name="Egg3" type="Sprite2D" parent="." unique_id=1746780684]
+texture = SubResource("AtlasTexture_6n7uj")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=931767137]
+shape = SubResource("CircleShape2D_xiptd")
+
+[node name="Area2D" type="Area2D" parent="." unique_id=1090417979]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=587220755]
+shape = SubResource("CircleShape2D_qcief")

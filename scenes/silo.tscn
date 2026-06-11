@@ -1,0 +1,19 @@
+[gd_scene format=3 uid="uid://dhy2qoy53tmsv"]
+
+[ext_resource type="Texture2D" uid="uid://cm441p6ccs2jv" path="res://assets/Buildings/Buildings/Unique_Buildings/Silo/Silo.png" id="1_5imql"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_5imql"]
+radius = 7.9995537
+height = 32.0
+
+[node name="Silo" type="StaticBody2D" unique_id=1726725691]
+z_index = 1
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=293938585]
+position = Vector2(0, -24)
+texture = ExtResource("1_5imql")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1718827681]
+position = Vector2(-2.9802322e-08, 0)
+rotation = 1.5602337
+shape = SubResource("CapsuleShape2D_5imql")

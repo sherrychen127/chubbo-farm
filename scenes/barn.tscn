@@ -1,0 +1,17 @@
+[gd_scene format=3 uid="uid://nlcsemdbp3wc"]
+
+[ext_resource type="Texture2D" uid="uid://dytmylpvqthps" path="res://assets/Buildings/Buildings/Unique_Buildings/Barn/Barn_Base_Red.png" id="1_xlpyp"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ldo1f"]
+size = Vector2(64, 24)
+
+[node name="Barn" type="StaticBody2D" unique_id=145491242]
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=316133624]
+position = Vector2(0, 9.536743e-07)
+scale = Vector2(0.64062506, 0.6666667)
+texture = ExtResource("1_xlpyp")
+offset = Vector2(0, -40)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=232138408]
+shape = SubResource("RectangleShape2D_ldo1f")

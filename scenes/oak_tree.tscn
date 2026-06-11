@@ -1,0 +1,21 @@
+[gd_scene format=3 uid="uid://b7t1v0schea4h"]
+
+[ext_resource type="Texture2D" uid="uid://cdnrjso034s5m" path="res://assets/Trees/Big_Oak_Tree.png" id="1_7e8fl"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_f2lq6"]
+atlas = ExtResource("1_7e8fl")
+region = Rect2(72, 0, 48, 72)
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_7e8fl"]
+radius = 6.0827627
+
+[node name="Oak_tree" type="StaticBody2D" unique_id=1559030903]
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1324440515]
+texture = SubResource("AtlasTexture_f2lq6")
+offset = Vector2(0, -25)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=538493782]
+z_index = 1
+position = Vector2(0, -1)
+shape = SubResource("CircleShape2D_7e8fl")

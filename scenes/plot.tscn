@@ -1,0 +1,34 @@
+[gd_scene format=3 uid="uid://sek3mcgpnvlq"]
+
+[ext_resource type="Script" uid="uid://cdiv0sk78e1qr" path="res://scripts/plot.gd" id="1_syd1t"]
+[ext_resource type="Texture2D" uid="uid://dqoh7uebk3yej" path="res://assets/Tiles/FarmLand/FarmLand_Tile.png" id="2_410i3"]
+[ext_resource type="Texture2D" uid="uid://rehgbo2ielkl" path="res://assets/Tiles/FarmLand/FarmLand_Wet_Tile.png" id="3_76l7f"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ryjlh"]
+atlas = ExtResource("2_410i3")
+region = Rect2(80, 16, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_72cjw"]
+atlas = ExtResource("3_76l7f")
+region = Rect2(80, 16, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_syd1t"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_syd1t"]
+size = Vector2(16, 16)
+
+[node name="Plot" type="StaticBody2D" unique_id=737693714]
+script = ExtResource("1_syd1t")
+dry_texture = SubResource("AtlasTexture_ryjlh")
+wet_texture = SubResource("AtlasTexture_72cjw")
+metadata/_custom_type_script = "uid://cdiv0sk78e1qr"
+
+[node name="SoilSprite" type="Sprite2D" parent="." unique_id=33564341]
+texture = SubResource("AtlasTexture_syd1t")
+
+[node name="CropSprite" type="Sprite2D" parent="." unique_id=1076710558]
+z_index = 1
+offset = Vector2(0, -3)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=405105147]
+shape = SubResource("RectangleShape2D_syd1t")

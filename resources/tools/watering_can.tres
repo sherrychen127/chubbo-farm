@@ -1,0 +1,16 @@
+[gd_resource type="Resource" script_class="InvItem" format=3 uid="uid://8qo8edm6cdm2"]
+
+[ext_resource type="Script" uid="uid://cn8mg2gakj00d" path="res://scripts/inventory_item.gd" id="1_nv58h"]
+[ext_resource type="Texture2D" uid="uid://dmm4gd2quvntm" path="res://assets/Icons/No Outline/Tool_Icons_NO_Outline.png" id="2_3w4dc"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_obruy"]
+atlas = ExtResource("2_3w4dc")
+region = Rect2(96, 0, 16, 16)
+
+[resource]
+script = ExtResource("1_nv58h")
+name = "watering_can"
+texture = SubResource("AtlasTexture_obruy")
+category = 2
+max_stack = 1
+metadata/_custom_type_script = "uid://cn8mg2gakj00d"

@@ -1,0 +1,90 @@
+[gd_scene format=3 uid="uid://t0wk0j776b4f"]
+
+[ext_resource type="PackedScene" uid="uid://d0yqwoeeqog5x" path="res://scenes/farm_world.tscn" id="1_rysoc"]
+[ext_resource type="PackedScene" uid="uid://bhjm0twfkommh" path="res://scenes/player.tscn" id="1_yqjtg"]
+[ext_resource type="PackedScene" uid="uid://q7c8fwy8uatw" path="res://scenes/chicken.tscn" id="3_0tnpc"]
+[ext_resource type="PackedScene" uid="uid://ms5yxy45mfn" path="res://scenes/egg_nest.tscn" id="4_vtaks"]
+[ext_resource type="PackedScene" uid="uid://cj4t7nyhw2d2c" path="res://scenes/ui/inventory_ui.tscn" id="10_vtaks"]
+[ext_resource type="FontFile" uid="uid://dv3m3trq0j3d6" path="res://old_assets/ui/fonts/RevMiniPixel.ttf" id="11_trtic"]
+[ext_resource type="Script" uid="uid://b6riwn0n1mnel" path="res://scripts/gui.gd" id="12_ir15t"]
+[ext_resource type="Script" uid="uid://chx562x0wca10" path="res://scripts/world_clock.gd" id="13_kvuet"]
+[ext_resource type="Resource" uid="uid://ded741sg1tk0n" path="res://resources/player_inventory.tres" id="17_rysoc"]
+
+[node name="game" type="Node2D" unique_id=334847478]
+y_sort_enabled = true
+position = Vector2(122, 61)
+
+[node name="FarmWorld" parent="." unique_id=728224754 instance=ExtResource("1_rysoc")]
+position = Vector2(578, 277)
+
+[node name="FarmAnimals" type="Node2D" parent="FarmWorld" unique_id=1447434455]
+
+[node name="Chicken" parent="FarmWorld/FarmAnimals" unique_id=657872734 node_paths=PackedStringArray("nest") instance=ExtResource("3_0tnpc")]
+position = Vector2(-55, -24)
+nest = NodePath("../EggNest")
+egg_interval_hours = 12
+
+[node name="EggNest" parent="FarmWorld/FarmAnimals" unique_id=174743682 instance=ExtResource("4_vtaks")]
+position = Vector2(-87, -11)
+
+[node name="player" parent="." unique_id=1312192759 groups=["player"] instance=ExtResource("1_yqjtg")]
+z_index = 0
+y_sort_enabled = true
+position = Vector2(575, 325)
+inventory = ExtResource("17_rysoc")
+
+[node name="Camera2D" type="Camera2D" parent="player" unique_id=1004921754]
+position = Vector2(78, -18)
+zoom = Vector2(3, 3)
+limit_left = 228
+limit_top = -21
+limit_right = 954
+limit_bottom = 511
+
+[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=1635262361]
+
+[node name="Control" type="Control" parent="CanvasLayer" unique_id=1105043010]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="GUI" type="Label" parent="CanvasLayer/Control" unique_id=1074998783]
+z_index = 999
+layout_mode = 1
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -229.0
+offset_top = 26.0
+offset_right = 3.0
+offset_bottom = 157.0
+grow_horizontal = 0
+scale = Vector2(0.52083015, 0.52083015)
+theme_override_fonts/font = ExtResource("11_trtic")
+theme_override_font_sizes/font_size = 64
+text = "Day: 1
+Hour: 0"
+script = ExtResource("12_ir15t")
+
+[node name="InventoryUI" parent="CanvasLayer/Control" unique_id=2316612 groups=["inventory_ui"] instance=ExtResource("10_vtaks")]
+z_index = 999
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.046875
+anchor_top = 0.77500004
+anchor_right = 0.966
+anchor_bottom = 0.94290113
+offset_top = -0.2000122
+offset_right = 80.16797
+offset_bottom = 10.0
+grow_horizontal = 2
+grow_vertical = 0
+scale = Vector2(3, 3)
+metadata/_edit_use_anchors_ = true
+
+[node name="WorldClock" type="Timer" parent="." unique_id=1495475248 groups=["world_clock"]]
+unique_name_in_owner = true
+script = ExtResource("13_kvuet")

@@ -1,0 +1,16 @@
+[gd_scene format=3 uid="uid://fn1kiyyylsfc"]
+
+[ext_resource type="Script" uid="uid://dmwmbxcqoj83j" path="res://scripts/farm_animal.gd" id="1_h0fps"]
+
+[node name="FarmAnimal" type="CharacterBody2D" unique_id=657872734]
+script = ExtResource("1_h0fps")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1642769081]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=184793995]
+
+[node name="Area2D" type="Area2D" parent="." unique_id=1318010775]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=155652921]
+
+[node name="WanderTimer" type="Timer" parent="." unique_id=1595979709]

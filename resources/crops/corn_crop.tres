@@ -1,0 +1,22 @@
+[gd_resource type="Resource" script_class="Crop" format=3 uid="uid://dmuvy36arvmlr"]
+
+[ext_resource type="Script" uid="uid://cbwpijo5q0k7d" path="res://scripts/crop_resource.gd" id="1_e6ii1"]
+[ext_resource type="Resource" uid="uid://c8e855casyas4" path="res://resources/crops/corn_pickable.tres" id="1_ros1i"]
+[ext_resource type="Script" uid="uid://bhyt6a3fio8nt" path="res://scripts/mapped_texture_resource.gd" id="2_ros1i"]
+[ext_resource type="Texture2D" uid="uid://dalmqebx0nju0" path="res://assets/Crops/Crops.png" id="3_8k6kj"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_unpfa"]
+atlas = ExtResource("3_8k6kj")
+region = Rect2(32, 128, 64, 40)
+
+[sub_resource type="Resource" id="Resource_6xcc8"]
+script = ExtResource("2_ros1i")
+texture_resource = SubResource("AtlasTexture_unpfa")
+metadata/_custom_type_script = "uid://bhyt6a3fio8nt"
+
+[resource]
+script = ExtResource("1_e6ii1")
+name = "corn_crop"
+texture_resource = SubResource("Resource_6xcc8")
+harvest_item = ExtResource("1_ros1i")
+metadata/_custom_type_script = "uid://cbwpijo5q0k7d"

@@ -1,0 +1,134 @@
+[gd_scene format=3 uid="uid://0naup1el7mgj"]
+
+[ext_resource type="Texture2D" uid="uid://bhbhbnajbnn3m" path="res://assets/Outdoor decoration/Outdoor_Decor_Animations/Other_Animations/Fence_Big_Gate.png" id="1_8ikxo"]
+[ext_resource type="Script" uid="uid://b438xkdoddwv0" path="res://scripts/fence_gate.gd" id="1_obxiq"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_cq6go"]
+atlas = ExtResource("1_8ikxo")
+region = Rect2(0, 32, 48, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_obxiq"]
+atlas = ExtResource("1_8ikxo")
+region = Rect2(192, 32, 48, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_l2hkf"]
+atlas = ExtResource("1_8ikxo")
+region = Rect2(144, 32, 48, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_jo35k"]
+atlas = ExtResource("1_8ikxo")
+region = Rect2(96, 32, 48, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_shkr0"]
+atlas = ExtResource("1_8ikxo")
+region = Rect2(48, 32, 48, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_br77u"]
+atlas = ExtResource("1_8ikxo")
+region = Rect2(0, 32, 48, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ipnbh"]
+atlas = ExtResource("1_8ikxo")
+region = Rect2(192, 32, 48, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_p6u1m"]
+atlas = ExtResource("1_8ikxo")
+region = Rect2(0, 32, 48, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_7kbif"]
+atlas = ExtResource("1_8ikxo")
+region = Rect2(48, 32, 48, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_di3x7"]
+atlas = ExtResource("1_8ikxo")
+region = Rect2(96, 32, 48, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_0wdj2"]
+atlas = ExtResource("1_8ikxo")
+region = Rect2(144, 32, 48, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_mcleo"]
+atlas = ExtResource("1_8ikxo")
+region = Rect2(192, 32, 48, 32)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_c3bym"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_cq6go")
+}],
+"loop": false,
+"name": &"closed",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_obxiq")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_l2hkf")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_jo35k")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_shkr0")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_br77u")
+}],
+"loop": false,
+"name": &"closing",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ipnbh")
+}],
+"loop": false,
+"name": &"open",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_p6u1m")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_7kbif")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_di3x7")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_0wdj2")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_mcleo")
+}],
+"loop": false,
+"name": &"opening",
+"speed": 5.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_8ikxo"]
+size = Vector2(48, 16)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_obxiq"]
+size = Vector2(32, 32)
+
+[node name="FenceGate" type="StaticBody2D" unique_id=1911695580]
+script = ExtResource("1_obxiq")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=87940740]
+sprite_frames = SubResource("SpriteFrames_c3bym")
+animation = &"closed"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1110172352]
+position = Vector2(0, -8)
+shape = SubResource("RectangleShape2D_8ikxo")
+
+[node name="InteractionArea" type="Area2D" parent="." unique_id=1298624434]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="InteractionArea" unique_id=1759323876]
+position = Vector2(0, -8)
+shape = SubResource("RectangleShape2D_obxiq")

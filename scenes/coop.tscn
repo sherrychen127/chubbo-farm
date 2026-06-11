@@ -1,0 +1,22 @@
+[gd_scene format=3 uid="uid://bsx2qq6k2qq63"]
+
+[ext_resource type="Texture2D" uid="uid://iwyuigwhho0g" path="res://assets/Buildings/Buildings/Unique_Buildings/Coop/Coop_Base_Black.png" id="1_pkwsc"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_nls8x"]
+atlas = ExtResource("1_pkwsc")
+region = Rect2(168, 8, 64, 112)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_aoooh"]
+size = Vector2(40, 25)
+
+[node name="Coop" type="StaticBody2D" unique_id=1998712320]
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1196945045]
+position = Vector2(5.684342e-14, 0)
+scale = Vector2(0.83593756, 0.75000006)
+texture = SubResource("AtlasTexture_nls8x")
+offset = Vector2(0, -40)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1155263568]
+position = Vector2(0, -8)
+shape = SubResource("RectangleShape2D_aoooh")
