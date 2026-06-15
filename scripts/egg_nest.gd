@@ -5,7 +5,7 @@ extends StaticBody2D
 @export var max_eggs := 3
 
 var egg_count := 0
-
+@onready var popup := $PopUp
 @onready var egg_sprites := [
 	$Egg1,
 	$Egg2,
@@ -45,5 +45,9 @@ func collect_eggs(player) -> void:
 
 
 func update_visuals() -> void:
+	if egg_count > 0:
+		popup.visible = true 
+	else:
+		popup.visible = false
 	for i in range(egg_sprites.size()):
 		egg_sprites[i].visible = i < egg_count

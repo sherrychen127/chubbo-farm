@@ -59,7 +59,7 @@ animations = [{
 }],
 "loop": false,
 "name": &"closed",
-"speed": 5.0
+"speed": 10.0
 }, {
 "frames": [{
 "duration": 1.0,
@@ -79,7 +79,7 @@ animations = [{
 }],
 "loop": false,
 "name": &"closing",
-"speed": 5.0
+"speed": 20.0
 }, {
 "frames": [{
 "duration": 1.0,
@@ -87,7 +87,7 @@ animations = [{
 }],
 "loop": false,
 "name": &"open",
-"speed": 5.0
+"speed": 10.0
 }, {
 "frames": [{
 "duration": 1.0,
@@ -107,21 +107,21 @@ animations = [{
 }],
 "loop": false,
 "name": &"opening",
-"speed": 5.0
+"speed": 20.0
 }]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_8ikxo"]
 size = Vector2(48, 16)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_obxiq"]
-size = Vector2(32, 32)
+size = Vector2(48, 32)
 
 [node name="FenceGate" type="StaticBody2D" unique_id=1911695580]
 script = ExtResource("1_obxiq")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=87940740]
 sprite_frames = SubResource("SpriteFrames_c3bym")
-animation = &"closed"
+animation = &"opening"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1110172352]
 position = Vector2(0, -8)

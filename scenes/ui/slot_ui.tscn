@@ -14,8 +14,8 @@ offset_bottom = 17.0
 script = ExtResource("1_nfd3l")
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=284015473]
-position = Vector2(8.5, 8.499999)
-scale = Vector2(1.0625, 1.0625)
+position = Vector2(9.5, 9.5)
+scale = Vector2(1.1875, 1.1875001)
 texture = SubResource("AtlasTexture_mkq7t")
 
 [node name="ItemIcon" type="TextureRect" parent="." unique_id=1038749086]
@@ -23,17 +23,18 @@ clip_contents = true
 custom_minimum_size = Vector2(16, 16)
 layout_mode = 0
 offset_left = 1.0
+offset_top = 2.0
 offset_right = 17.0
-offset_bottom = 16.0
+offset_bottom = 18.0
 expand_mode = 1
 stretch_mode = 5
 
 [node name="QuantityLabel" type="Label" parent="." unique_id=1570954803]
 layout_mode = 0
-offset_left = 6.0
-offset_top = 9.0
-offset_right = 16.0
-offset_bottom = 19.0
+offset_left = 8.0
+offset_top = 10.0
+offset_right = 18.0
+offset_bottom = 20.0
 theme_override_fonts/font = ExtResource("3_aru5l")
 theme_override_font_sizes/font_size = 9
 horizontal_alignment = 2

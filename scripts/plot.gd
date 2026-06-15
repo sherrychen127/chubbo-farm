@@ -56,6 +56,8 @@ func update_sprite() -> void:
 	crop_sprite.visible = true
 
 
+
+
 func plant_crop(new_crop: Crop) -> bool:
 	if new_crop == null:
 		print("ERROR: new_crop is null")

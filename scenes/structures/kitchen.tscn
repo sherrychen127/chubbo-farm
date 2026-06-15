@@ -1,0 +1,23 @@
+[gd_scene format=3 uid="uid://bpgr624erloaa"]
+
+[ext_resource type="Script" uid="uid://beebwn8dbnscq" path="res://scripts/kitchen.gd" id="1_2iqyo"]
+[ext_resource type="Texture2D" uid="uid://bc2npf757xeiu" path="res://assets/Buildings/House_Decor/Kitchen_Furniture.png" id="1_7ilqw"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_mrp8g"]
+atlas = ExtResource("1_7ilqw")
+region = Rect2(16, 13, 16, 19)
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_2iqyo"]
+radius = 21.333334
+
+[node name="Kitchen" type="Node2D" unique_id=1811664513]
+scale = Vector2(1.5, 1.5)
+script = ExtResource("1_2iqyo")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1570840884]
+texture = SubResource("AtlasTexture_mrp8g")
+
+[node name="Area2D" type="Area2D" parent="." unique_id=1891557648]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=1090498278]
+shape = SubResource("CircleShape2D_2iqyo")

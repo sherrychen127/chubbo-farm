@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://6t0dgpt5fuwv"
-path="res://.godot/imported/Player_Action_Free.png-525640da977ef8d418f3f802fbd8a2a4.ctex"
+uid="uid://cxl3lficnysj2"
+path="res://.godot/imported/wave_anim.png-aefb2a04396c7d995fd97844b737dc60.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://old_assets/characters/Player_Action_Free.png"
-dest_files=["res://.godot/imported/Player_Action_Free.png-525640da977ef8d418f3f802fbd8a2a4.ctex"]
+source_file="res://assets/Tiles/Beach/wave_anim.png"
+dest_files=["res://.godot/imported/wave_anim.png-aefb2a04396c7d995fd97844b737dc60.ctex"]
 
 [params]
 

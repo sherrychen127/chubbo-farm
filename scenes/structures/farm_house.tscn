@@ -1,0 +1,64 @@
+[gd_scene format=3 uid="uid://c7lcprrwmp6yl"]
+
+[ext_resource type="Texture2D" uid="uid://vbtu0i610uv0" path="res://assets/Buildings/Buildings/Houses/Wood/House_2_Wood_Red_Red.png" id="1_xyipo"]
+[ext_resource type="Texture2D" uid="uid://dp3o6v4o4jhsj" path="res://assets/Buildings/House_Decor/Chimney_smoke_Anim.png" id="2_bmfkc"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_34qot"]
+atlas = ExtResource("2_bmfkc")
+region = Rect2(0, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_lry4o"]
+atlas = ExtResource("2_bmfkc")
+region = Rect2(32, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_w5dcf"]
+atlas = ExtResource("2_bmfkc")
+region = Rect2(64, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_abg7w"]
+atlas = ExtResource("2_bmfkc")
+region = Rect2(96, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_bhsp8"]
+atlas = ExtResource("2_bmfkc")
+region = Rect2(128, 0, 32, 32)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_qntqt"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_34qot")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_lry4o")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_w5dcf")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_abg7w")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_bhsp8")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[node name="FarmHouse" type="StaticBody2D" unique_id=17775750]
+z_index = 1
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=2019828689]
+texture = ExtResource("1_xyipo")
+offset = Vector2(0, -30)
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1936992590]
+z_index = 1
+position = Vector2(2, -73)
+sprite_frames = SubResource("SpriteFrames_qntqt")
+autoplay = "default"
+frame_progress = 0.9178447
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="." unique_id=2081165042]
+polygon = PackedVector2Array(-55, 18, -39, 18, -39, 10, -25, 10, -25, 18, 6, 18, 6, 4, 54, 4, 54, -22, -56, -22)

@@ -1,8 +1,9 @@
 [gd_scene format=3 uid="uid://q7c8fwy8uatw"]
 
-[ext_resource type="PackedScene" uid="uid://fn1kiyyylsfc" path="res://scenes/farm_animal.tscn" id="1_8lku0"]
+[ext_resource type="PackedScene" uid="uid://fn1kiyyylsfc" path="res://scenes/animals/farm_animal.tscn" id="1_8lku0"]
 [ext_resource type="Texture2D" uid="uid://ds67ic2ipsgko" path="res://assets/Animals/Chicken/Chicken_05.png" id="2_1yv3s"]
 [ext_resource type="Script" uid="uid://bgmpy8qk3mcqj" path="res://scripts/chicken.gd" id="2_nutj5"]
+[ext_resource type="Texture2D" uid="uid://bybs5yi5di568" path="res://assets/UI/UI_Pop_Up.png" id="4_wthsh"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_7ym0r"]
 atlas = ExtResource("2_1yv3s")
@@ -241,7 +242,12 @@ radius = 3.0
 [sub_resource type="CircleShape2D" id="CircleShape2D_nutj5"]
 radius = 9.0
 
+[sub_resource type="AtlasTexture" id="AtlasTexture_fdvt3"]
+atlas = ExtResource("4_wthsh")
+region = Rect2(48, 0, 48, 48)
+
 [node name="Chicken" unique_id=657872734 instance=ExtResource("1_8lku0")]
+y_sort_enabled = true
 script = ExtResource("2_nutj5")
 egg_interval_hours = 24
 
@@ -259,3 +265,9 @@ shape = SubResource("CircleShape2D_nutj5")
 
 [node name="WanderTimer" parent="." index="3" unique_id=1595979709]
 one_shot = true
+
+[node name="Sprite2D" type="Sprite2D" parent="." index="4" unique_id=1630067919]
+visible = false
+position = Vector2(0, -16)
+scale = Vector2(0.5, 0.5)
+texture = SubResource("AtlasTexture_fdvt3")

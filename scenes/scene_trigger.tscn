@@ -1,0 +1,9 @@
+[gd_scene format=3 uid="uid://csc62ukmw3fad"]
+
+[ext_resource type="Script" uid="uid://dlrbkm1d1mwmt" path="res://scripts/door.gd" id="1_uvdjg"]
+
+[node name="SceneTrigger" type="Area2D" unique_id=1101155208]
+script = ExtResource("1_uvdjg")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=960917973]
+position = Vector2(0, 6)

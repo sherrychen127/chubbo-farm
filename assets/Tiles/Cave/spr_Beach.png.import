@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://c6ohrdj6tvdh3"
-path="res://.godot/imported/Player.png-475acb643dc1d4b924a71166fec89eda.ctex"
+uid="uid://d3o4an2u6koqk"
+path="res://.godot/imported/spr_Beach.png-f7377b1b5cc7e469179921f011591f8c.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://old_assets/characters/Player.png"
-dest_files=["res://.godot/imported/Player.png-475acb643dc1d4b924a71166fec89eda.ctex"]
+source_file="res://assets/Tiles/Cave/spr_Beach.png"
+dest_files=["res://.godot/imported/spr_Beach.png-f7377b1b5cc7e469179921f011591f8c.ctex"]
 
 [params]
 

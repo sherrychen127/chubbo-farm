@@ -52,4 +52,4 @@ func remove_from_slot(index: int, amount: int = 1) -> void:
 	if slot.quantity <= 0:
 		slot.item = null
 		slot.quantity = 0
-	#inventory_changed.emit()
+	inventory_changed.emit()

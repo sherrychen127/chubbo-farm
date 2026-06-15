@@ -1,0 +1,29 @@
+[gd_scene format=3 uid="uid://c2t2rb64rlfsd"]
+
+[ext_resource type="Texture2D" uid="uid://dvicbrhpjf3lo" path="res://assets/tiles/Bridge/Bridge_Wood.png" id="1_7ct4w"]
+[ext_resource type="Texture2D" uid="uid://nhqktl7xpawu" path="res://assets/Tiles/Water/Water_Middle.png" id="2_im2sa"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_im2sa"]
+atlas = ExtResource("1_7ct4w")
+region = Rect2(0, 16, 48, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_1q54l"]
+atlas = ExtResource("2_im2sa")
+
+[node name="Bridge" type="Node2D" unique_id=693228230]
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=2117075022]
+texture = SubResource("AtlasTexture_im2sa")
+
+[node name="Area2D" type="Area2D" parent="." unique_id=1781279116]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=119611533]
+
+[node name="StaticBody2D" type="StaticBody2D" parent="." unique_id=337756423]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D" unique_id=786497370]
+
+[node name="water" type="Sprite2D" parent="." unique_id=830246730]
+position = Vector2(0, 4.7683716e-07)
+scale = Vector2(1, 2)
+texture = SubResource("AtlasTexture_1q54l")

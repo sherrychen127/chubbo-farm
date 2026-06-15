@@ -1,7 +1,7 @@
 extends CharacterBody2D
 
 @export var inventory: Inventory
-@export var speed := 200.0
+@export var speed := 120.0
 @onready var sprite: AnimatedSprite2D = $AnimatedSprite2D
 @export var selected_slot_index: int = 0
 var target_position: Vector2
@@ -11,11 +11,13 @@ var target_plot: Plot = null
 var interaction_distance := 24.0
 
 func _ready() -> void:
-	if inventory == null:
-		inventory = Inventory.new()
-	if inventory.slots.is_empty():
-		inventory.setup(12)
+	Global.player = self
 
+	if Global.inventory == null:
+		Global.inventory = Inventory.new()
+		Global.inventory.setup(12)
+
+	inventory = Global.inventory
 
 func add_to_inventory(item: InvItem, amount: int = 1) -> bool:
 	print("Adding to player inventory: ", item.name, " x", amount)
