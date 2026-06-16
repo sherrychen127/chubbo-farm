@@ -1,6 +1,6 @@
 [gd_scene format=4 uid="uid://t0wk0j776b4f"]
 
-[ext_resource type="Script" uid="uid://cv580c55aj6oy" path="res://game.gd" id="1_0tnpc"]
+[ext_resource type="Script" uid="uid://cv580c55aj6oy" path="res://scripts/game.gd" id="1_0tnpc"]
 [ext_resource type="PackedScene" uid="uid://bhjm0twfkommh" path="res://scenes/player.tscn" id="1_yqjtg"]
 [ext_resource type="PackedScene" uid="uid://cj4t7nyhw2d2c" path="res://scenes/ui/inventory_ui.tscn" id="10_vtaks"]
 [ext_resource type="Script" uid="uid://b6riwn0n1mnel" path="res://scripts/gui.gd" id="12_ir15t"]
@@ -204,6 +204,9 @@ cache/0/25/0/glyphs/69/texture_idx = 0
 [node name="game" type="Node2D" unique_id=334847478]
 y_sort_enabled = true
 script = ExtResource("1_0tnpc")
+
+[node name="Maps" type="Node2D" parent="." unique_id=1352699276]
+y_sort_enabled = true
 
 [node name="player" parent="." unique_id=1312192759 groups=["player"] instance=ExtResource("1_yqjtg")]
 z_index = 0

@@ -30,14 +30,14 @@ func collect_eggs(player) -> void:
 	if egg_count <= 0:
 		print("No eggs in nest")
 		return
-	print("egg_item = ", egg_item)
+	#print("egg_item = ", egg_item)
 
 
 	player.inventory.add_item(egg_item, egg_count)
 
-	print("Inventory after adding:")
-	for slot in player.inventory.slots:
-		print("slot item=", slot.item, " qty=", slot.quantity)
+	#print("Inventory after adding:")
+	#for slot in player.inventory.slots:
+		#print("slot item=", slot.item, " qty=", slot.quantity)
 
 	print("Collected ", egg_count, " eggs")
 	egg_count = 0

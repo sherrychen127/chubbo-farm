@@ -8,4 +8,4 @@ func _ready() -> void:
 
 func _on_body_entered(body: Node) -> void:
 	if body.is_in_group("player"):
-		get_tree().current_scene.change_map(target_scene, target_spawn_name)
+		get_tree().current_scene.change_map.call_deferred(target_scene, target_spawn_name)
