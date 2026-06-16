@@ -3,6 +3,7 @@ extends Node
 @onready var map_root: Node = $Maps
 @onready var player: CharacterBody2D = $player
 @onready var world_clock: WorldClock = $WorldClock
+var loaded_maps := {}
 
 func _ready() -> void:
 	print("MAIN READY")

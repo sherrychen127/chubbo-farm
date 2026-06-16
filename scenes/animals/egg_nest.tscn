@@ -2,7 +2,7 @@
 
 [ext_resource type="Script" uid="uid://l1bt7mkjc0tt" path="res://scripts/egg_nest.gd" id="1_qcief"]
 [ext_resource type="Texture2D" uid="uid://djxanfcgcrm4k" path="res://assets/Outdoor decoration/Nests.png" id="1_xiptd"]
-[ext_resource type="Resource" uid="uid://b8ybyt0v7x1j2" path="res://resources/animal_products/egg.tres" id="2_gfqfv"]
+[ext_resource type="Resource" uid="uid://b8ybyt0v7x1j2" path="res://resources/ingredients/egg.tres" id="2_gfqfv"]
 [ext_resource type="Texture2D" uid="uid://bybs5yi5di568" path="res://assets/UI/UI_Pop_Up.png" id="4_8vv3u"]
 [ext_resource type="Texture2D" uid="uid://bk3vq646itlbl" path="res://assets/Icons/No Outline/Food_Icons_NO_Outline.png" id="5_kbw1f"]
 

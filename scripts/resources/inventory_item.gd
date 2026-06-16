@@ -3,7 +3,7 @@ extends Resource
 
 enum ItemCategory {
 	SEED,
-	RESOURCE,
+	ORE,
 	TOOL,
 	INGREDIENT,
 	FOOD,

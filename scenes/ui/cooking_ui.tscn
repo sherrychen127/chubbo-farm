@@ -1,38 +1,73 @@
 [gd_scene format=3 uid="uid://d1yx20r1cvbfv"]
 
 [ext_resource type="Script" uid="uid://cdq6650mmj14j" path="res://scripts/cooking_ui.gd" id="1_ylnkl"]
+[ext_resource type="Script" uid="uid://crsyl7hn73f7t" path="res://scripts/resources/recipe.gd" id="2_hqv4y"]
+[ext_resource type="Resource" uid="uid://ck55bivwibdal" path="res://resources/recipes/fried_egg_recipe.tres" id="3_dstv7"]
 
 [node name="CookingUI" type="Control" unique_id=576238021]
 layout_mode = 3
 anchors_preset = 0
 script = ExtResource("1_ylnkl")
+recipes = Array[ExtResource("2_hqv4y")]([ExtResource("3_dstv7")])
 
 [node name="Panel" type="Panel" parent="." unique_id=1055279849]
 layout_mode = 0
-offset_right = 128.0
-offset_bottom = 128.0
+offset_top = 3.0
+offset_right = 243.0
+offset_bottom = 158.0
 
-[node name="VBoxContainer" type="VBoxContainer" parent="Panel" unique_id=1915104314]
+[node name="MarginContainer" type="MarginContainer" parent="Panel" unique_id=1690005498]
 layout_mode = 0
-offset_right = 128.0
-offset_bottom = 128.0
+offset_top = 3.0
+offset_right = 237.0
+offset_bottom = 150.0
 
-[node name="TitleLabel" type="Label" parent="Panel/VBoxContainer" unique_id=11295116]
+[node name="VBoxContainer" type="VBoxContainer" parent="Panel/MarginContainer" unique_id=1915104314]
+layout_mode = 2
+
+[node name="TitleLabel" type="Label" parent="Panel/MarginContainer/VBoxContainer" unique_id=11295116]
 layout_mode = 2
 text = "Recipe"
 
-[node name="RecipeLabel" type="Label" parent="Panel/VBoxContainer" unique_id=1220052247]
+[node name="HBoxContainer" type="HBoxContainer" parent="Panel/MarginContainer/VBoxContainer" unique_id=701999956]
+custom_minimum_size = Vector2(0, 120)
+layout_mode = 2
+
+[node name="RecipeList" type="VBoxContainer" parent="Panel/MarginContainer/VBoxContainer/HBoxContainer" unique_id=1512743353]
+custom_minimum_size = Vector2(90, 0)
+layout_mode = 2
+
+[node name="DetailPanel" type="Panel" parent="Panel/MarginContainer/VBoxContainer/HBoxContainer" unique_id=1417246174]
+custom_minimum_size = Vector2(80, 40)
+layout_mode = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Panel/MarginContainer/VBoxContainer/HBoxContainer/DetailPanel" unique_id=761150637]
+layout_mode = 0
+offset_left = 1.0
+offset_top = 2.0
+offset_right = 69.0
+offset_bottom = 122.0
+
+[node name="SelectedRecipeLabel" type="Label" parent="Panel/MarginContainer/VBoxContainer/HBoxContainer/DetailPanel/VBoxContainer" unique_id=1220052247]
 layout_mode = 2
 theme_override_font_sizes/font_size = 8
-text = "Egg Omelet, Eggx1"
+text = "Fried Egg"
 
-[node name="StatusLabel" type="Label" parent="Panel/VBoxContainer" unique_id=1650856144]
+[node name="IngredientLabel" type="Label" parent="Panel/MarginContainer/VBoxContainer/HBoxContainer/DetailPanel/VBoxContainer" unique_id=499617372]
 layout_mode = 2
+theme_override_font_sizes/font_size = 8
+text = "Needs:"
 
-[node name="CookButton" type="Button" parent="Panel/VBoxContainer" unique_id=1982735969]
+[node name="StatusLabel" type="Label" parent="Panel/MarginContainer/VBoxContainer/HBoxContainer/DetailPanel/VBoxContainer" unique_id=1650856144]
 layout_mode = 2
+theme_override_font_sizes/font_size = 8
+
+[node name="CookButton" type="Button" parent="Panel/MarginContainer/VBoxContainer/HBoxContainer/DetailPanel/VBoxContainer" unique_id=1982735969]
+layout_mode = 2
+theme_override_font_sizes/font_size = 10
 text = "Cook!"
 
-[node name="TakeButton" type="Button" parent="Panel/VBoxContainer" unique_id=1832103297]
+[node name="ResultLabel" type="Label" parent="Panel/MarginContainer/VBoxContainer/HBoxContainer/DetailPanel/VBoxContainer" unique_id=143419402]
+visible = false
 layout_mode = 2
-text = "Take"
+theme_override_font_sizes/font_size = 8

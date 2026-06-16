@@ -1,11 +1,12 @@
 [gd_resource type="Resource" script_class="Inventory" format=3 uid="uid://ded741sg1tk0n"]
 
-[ext_resource type="Script" uid="uid://c33mseulhwk0o" path="res://scripts/inventory.gd" id="1_1njko"]
-[ext_resource type="Script" uid="uid://buw6yw7cg0org" path="res://scripts/inventory_slot.gd" id="2_85a8j"]
+[ext_resource type="Script" uid="uid://c33mseulhwk0o" path="res://scripts/resources/inventory.gd" id="1_1njko"]
+[ext_resource type="Script" uid="uid://buw6yw7cg0org" path="res://scripts/resources/inventory_slot.gd" id="2_85a8j"]
 [ext_resource type="Resource" uid="uid://s6j7iv30coj3" path="res://resources/crops/corn_seed.tres" id="3_1njko"]
 [ext_resource type="Resource" uid="uid://8qo8edm6cdm2" path="res://resources/tools/watering_can.tres" id="4_85a8j"]
 [ext_resource type="Resource" uid="uid://d0f06kwwiw2xs" path="res://resources/tools/pickaxe.tres" id="4_hfe8y"]
 [ext_resource type="Resource" uid="uid://dhjuy8nr1bcgm" path="res://resources/crops/wheat_seed.tres" id="5_hfe8y"]
+[ext_resource type="Resource" uid="uid://b8ybyt0v7x1j2" path="res://resources/ingredients/egg.tres" id="7_n3o1a"]
 
 [sub_resource type="Resource" id="Resource_hfe8y"]
 script = ExtResource("2_85a8j")
@@ -31,7 +32,13 @@ item = ExtResource("3_1njko")
 quantity = 3
 metadata/_custom_type_script = "uid://buw6yw7cg0org"
 
+[sub_resource type="Resource" id="Resource_2ci4u"]
+script = ExtResource("2_85a8j")
+item = ExtResource("7_n3o1a")
+quantity = 2
+metadata/_custom_type_script = "uid://buw6yw7cg0org"
+
 [resource]
 script = ExtResource("1_1njko")
-slots = Array[ExtResource("2_85a8j")]([SubResource("Resource_hfe8y"), SubResource("Resource_ppbfd"), SubResource("Resource_1njko"), SubResource("Resource_n3o1a"), null, null, null, null, null, null, null, null])
+slots = Array[ExtResource("2_85a8j")]([SubResource("Resource_hfe8y"), SubResource("Resource_ppbfd"), SubResource("Resource_1njko"), SubResource("Resource_n3o1a"), SubResource("Resource_2ci4u"), null, null, null, null, null, null, null])
 metadata/_custom_type_script = "uid://c33mseulhwk0o"

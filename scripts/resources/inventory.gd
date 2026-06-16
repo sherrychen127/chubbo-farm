@@ -10,6 +10,14 @@ func setup(size: int = 12):
 	for i in size:
 		slots.append(InventorySlot.new())
 
+func has_item(item: InvItem, amount: int) -> bool:
+	var total: int = 0
+
+	for slot in slots:
+		if slot.item == item:
+			total += slot.quantity
+
+	return total >= amount
 
 func add_item(new_item: InvItem, amount: int = 1) -> bool:
 	# First try stacking
@@ -39,6 +47,29 @@ func add_item(new_item: InvItem, amount: int = 1) -> bool:
 	return false
 
 
+func remove_item(item: InvItem, amount: int) -> bool:
+	if not has_item(item, amount):
+		return false
+
+	var remaining: int = amount
+
+	for slot in slots:
+		if slot.item == item:
+			var removed: int = min(slot.quantity, remaining)
+			slot.quantity -= removed
+			remaining -= removed
+
+			if slot.quantity <= 0:
+				slot.item = null
+				slot.quantity = 0
+
+			if remaining <= 0:
+				inventory_changed.emit()
+				return true
+
+	inventory_changed.emit()
+	return true
+	
 func remove_from_slot(index: int, amount: int = 1) -> void:
 	if index < 0 or index >= slots.size():
 		return

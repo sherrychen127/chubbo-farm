@@ -205,9 +205,6 @@ cache/0/25/0/glyphs/69/texture_idx = 0
 y_sort_enabled = true
 script = ExtResource("1_0tnpc")
 
-[node name="Maps" type="Node2D" parent="." unique_id=1833087361]
-y_sort_enabled = true
-
 [node name="player" parent="." unique_id=1312192759 groups=["player"] instance=ExtResource("1_yqjtg")]
 z_index = 0
 y_sort_enabled = true

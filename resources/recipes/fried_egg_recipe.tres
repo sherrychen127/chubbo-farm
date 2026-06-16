@@ -1,0 +1,19 @@
+[gd_resource type="Resource" script_class="Recipe" format=3 uid="uid://ck55bivwibdal"]
+
+[ext_resource type="Script" uid="uid://buw6yw7cg0org" path="res://scripts/resources/inventory_slot.gd" id="1_paqsi"]
+[ext_resource type="Resource" uid="uid://b8ybyt0v7x1j2" path="res://resources/ingredients/egg.tres" id="2_paqsi"]
+[ext_resource type="Resource" uid="uid://spcryyjgnb1u" path="res://resources/food/fried_egg.tres" id="3_yflww"]
+[ext_resource type="Script" uid="uid://crsyl7hn73f7t" path="res://scripts/resources/recipe.gd" id="4_5l0uj"]
+
+[sub_resource type="Resource" id="Resource_k8hvb"]
+script = ExtResource("1_paqsi")
+item = ExtResource("2_paqsi")
+quantity = 1
+metadata/_custom_type_script = "uid://buw6yw7cg0org"
+
+[resource]
+script = ExtResource("4_5l0uj")
+recipe_name = "fried egg"
+ingredients = Array[ExtResource("1_paqsi")]([SubResource("Resource_k8hvb")])
+result_item = ExtResource("3_yflww")
+metadata/_custom_type_script = "uid://crsyl7hn73f7t"

@@ -1,6 +1,6 @@
 [gd_resource type="Resource" script_class="InvItem" format=3 uid="uid://bu4pxkmlgqhen"]
 
-[ext_resource type="Script" uid="uid://cn8mg2gakj00d" path="res://scripts/inventory_item.gd" id="1_h2x0l"]
+[ext_resource type="Script" uid="uid://cn8mg2gakj00d" path="res://scripts/resources/inventory_item.gd" id="1_h2x0l"]
 [ext_resource type="Texture2D" uid="uid://bk3vq646itlbl" path="res://assets/Icons/No Outline/Food_Icons_NO_Outline.png" id="2_28itv"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_qf6yu"]

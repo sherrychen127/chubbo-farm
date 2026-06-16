@@ -6,33 +6,21 @@ var inventory: Inventory
 func _ready() -> void:
 	call_deferred("setup_inventory")
 
-
-#func setup_inventory() -> void:
-	#var player = get_tree().get_first_node_in_group("player")
-	#if player == null:
-		#print("ERROR: InventoryUI cannot find player group")
-		#return
-#
-	#inventory = player.inventory
-	#if not inventory.inventory_changed.is_connected(refresh):
-		#inventory.inventory_changed.connect(refresh)
-	#refresh()
 	
 func setup_inventory() -> void:
 	var player = get_tree().get_first_node_in_group("player")
-
-	print("Player found: ", player)
-	print("Global.player: ", Global.player)
-	print("Global.inventory: ", Global.inventory)
-
 	if player == null:
 		print("ERROR: InventoryUI cannot find player group")
 		return
 
 	inventory = player.inventory
 
-	print("Inventory found: ", inventory)
-	print("Slot count: ", inventory.slots.size())
+	if inventory == null:
+		print("ERROR: Player inventory is null")
+		return
+
+	if not inventory.inventory_changed.is_connected(refresh):
+		inventory.inventory_changed.connect(refresh)
 
 	refresh()	
 

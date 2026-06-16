@@ -2,10 +2,25 @@
 
 [ext_resource type="Script" uid="uid://dmwmbxcqoj83j" path="res://scripts/farm_animal.gd" id="1_h0fps"]
 
+[sub_resource type="SpriteFrames" id="SpriteFrames_s1uqd"]
+animations = [{
+"frames": [],
+"loop": true,
+"name": &"eat",
+"speed": 5.0
+}, {
+"frames": [],
+"loop": true,
+"name": &"idle",
+"speed": 5.0
+}]
+
 [node name="FarmAnimal" type="CharacterBody2D" unique_id=657872734]
 script = ExtResource("1_h0fps")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1642769081]
+sprite_frames = SubResource("SpriteFrames_s1uqd")
+animation = &"eat"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=184793995]
 
