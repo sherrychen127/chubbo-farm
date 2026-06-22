@@ -1,0 +1,55 @@
+[gd_scene format=3 uid="uid://b334uclht5twr"]
+
+[ext_resource type="PackedScene" uid="uid://fijbv7li2ay0" path="res://scenes/plants/fruit_tree.tscn" id="1_y4qaw"]
+[ext_resource type="Resource" uid="uid://cfoohl7801o5k" path="res://resources/ingredients/apple.tres" id="2_tg2wr"]
+[ext_resource type="Texture2D" uid="uid://df5244ktvyk40" path="res://assets/Trees/Big_Fruit_Tree.png" id="3_to47j"]
+[ext_resource type="Texture2D" uid="uid://bpcs6u2k7aax6" path="res://assets/Crops/Fruit_Trees_Fruit_Objects.png" id="4_jnuek"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_iwthl"]
+atlas = ExtResource("3_to47j")
+region = Rect2(32, 0, 32, 64)
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_eh724"]
+radius = 3.0
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_eh724"]
+atlas = ExtResource("4_jnuek")
+region = Rect2(16, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_rph3u"]
+atlas = ExtResource("4_jnuek")
+region = Rect2(16, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_5w7v2"]
+atlas = ExtResource("4_jnuek")
+region = Rect2(16, 0, 16, 16)
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_rph3u"]
+radius = 13.0
+
+[node name="AppleTree" unique_id=1142718692 instance=ExtResource("1_y4qaw")]
+y_sort_enabled = true
+fruit_item = ExtResource("2_tg2wr")
+
+[node name="TreeSprite" parent="Tree" parent_id_path=PackedInt32Array(1358783025) index="0" unique_id=1158380735]
+position = Vector2(0, -14)
+texture = SubResource("AtlasTexture_iwthl")
+
+[node name="CollisionShape2D" parent="Tree" parent_id_path=PackedInt32Array(1358783025) index="1" unique_id=829637923]
+shape = SubResource("CircleShape2D_eh724")
+
+[node name="Fruit1" parent="HarvestArea" parent_id_path=PackedInt32Array(277601680) index="0" unique_id=1282655600]
+position = Vector2(5, -21)
+texture = SubResource("AtlasTexture_eh724")
+
+[node name="Fruit2" parent="HarvestArea" parent_id_path=PackedInt32Array(277601680) index="1" unique_id=1337183349]
+position = Vector2(-7, -27)
+texture = SubResource("AtlasTexture_rph3u")
+
+[node name="Fruit3" parent="HarvestArea" parent_id_path=PackedInt32Array(277601680) index="2" unique_id=2016871334]
+position = Vector2(-6, -11)
+texture = SubResource("AtlasTexture_5w7v2")
+
+[node name="CollisionShape2D" parent="HarvestArea" parent_id_path=PackedInt32Array(277601680) index="3" unique_id=482522127]
+position = Vector2(0, -5)
+shape = SubResource("CircleShape2D_rph3u")

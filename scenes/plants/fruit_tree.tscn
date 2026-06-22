@@ -1,0 +1,22 @@
+[gd_scene format=3 uid="uid://fijbv7li2ay0"]
+
+[ext_resource type="Script" uid="uid://bkjaviomcqy7f" path="res://scripts/fruit_tree.gd" id="1_frg3x"]
+
+[node name="FruitTree" type="Node2D" unique_id=1142718692]
+script = ExtResource("1_frg3x")
+
+[node name="Tree" type="StaticBody2D" parent="." unique_id=1358783025]
+
+[node name="TreeSprite" type="Sprite2D" parent="Tree" unique_id=1158380735]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Tree" unique_id=829637923]
+
+[node name="HarvestArea" type="Area2D" parent="." unique_id=277601680]
+
+[node name="Fruit1" type="Sprite2D" parent="HarvestArea" unique_id=1282655600]
+
+[node name="Fruit2" type="Sprite2D" parent="HarvestArea" unique_id=1337183349]
+
+[node name="Fruit3" type="Sprite2D" parent="HarvestArea" unique_id=2016871334]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="HarvestArea" unique_id=482522127]

@@ -122,6 +122,10 @@ func try_interact() -> void:
 
 	for area in areas:
 		var target = area.get_parent()
+		
+		if target is FruitTree:
+			target.collect_fruit(self)
+			return
 
 		if target is Nest:
 			target.collect_eggs(self)

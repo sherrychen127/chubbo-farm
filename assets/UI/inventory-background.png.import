@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dq7ub2qc7k0gl"
-path="res://.godot/imported/Interior_Walls.png-89bc328905721c26008dc860b43e656f.ctex"
+uid="uid://8132kbp51qt"
+path="res://.godot/imported/inventory-background.png-f260451da17955a6ea742cbbf01e3295.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/Buildings/Houses_Interiors/Interior_Walls.png"
-dest_files=["res://.godot/imported/Interior_Walls.png-89bc328905721c26008dc860b43e656f.ctex"]
+source_file="res://assets/UI/inventory-background.png"
+dest_files=["res://.godot/imported/inventory-background.png-f260451da17955a6ea742cbbf01e3295.ctex"]
 
 [params]
 

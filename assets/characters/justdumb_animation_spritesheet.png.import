@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dq7ub2qc7k0gl"
-path="res://.godot/imported/Interior_Walls.png-89bc328905721c26008dc860b43e656f.ctex"
+uid="uid://dxl27ctqpvmih"
+path="res://.godot/imported/justdumb_animation_spritesheet.png-980f4d1e7a0bb7177983fb8cfe99802d.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/Buildings/Houses_Interiors/Interior_Walls.png"
-dest_files=["res://.godot/imported/Interior_Walls.png-89bc328905721c26008dc860b43e656f.ctex"]
+source_file="res://assets/characters/justdumb_animation_spritesheet.png"
+dest_files=["res://.godot/imported/justdumb_animation_spritesheet.png-980f4d1e7a0bb7177983fb8cfe99802d.ctex"]
 
 [params]
 

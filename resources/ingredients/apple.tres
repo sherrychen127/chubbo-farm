@@ -1,0 +1,15 @@
+[gd_resource type="Resource" script_class="InvItem" format=3 uid="uid://cfoohl7801o5k"]
+
+[ext_resource type="Script" uid="uid://cn8mg2gakj00d" path="res://scripts/resources/inventory_item.gd" id="1_4k1u6"]
+[ext_resource type="Texture2D" uid="uid://bpcs6u2k7aax6" path="res://assets/Crops/Fruit_Trees_Fruit_Objects.png" id="2_w3n58"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_yjujg"]
+atlas = ExtResource("2_w3n58")
+region = Rect2(16, 0, 16, 16)
+
+[resource]
+script = ExtResource("1_4k1u6")
+name = "apple"
+texture = SubResource("AtlasTexture_yjujg")
+category = 3
+metadata/_custom_type_script = "uid://cn8mg2gakj00d"

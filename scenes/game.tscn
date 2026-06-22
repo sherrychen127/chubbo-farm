@@ -5,7 +5,6 @@
 [ext_resource type="PackedScene" uid="uid://cj4t7nyhw2d2c" path="res://scenes/ui/inventory_ui.tscn" id="10_vtaks"]
 [ext_resource type="Script" uid="uid://b6riwn0n1mnel" path="res://scripts/gui.gd" id="12_ir15t"]
 [ext_resource type="Script" uid="uid://chx562x0wca10" path="res://scripts/world_clock.gd" id="13_kvuet"]
-[ext_resource type="Resource" uid="uid://ded741sg1tk0n" path="res://resources/player_inventory.tres" id="17_rysoc"]
 
 [sub_resource type="Image" id="Image_vtaks"]
 data = {
@@ -208,15 +207,6 @@ script = ExtResource("1_0tnpc")
 [node name="Maps" type="Node2D" parent="." unique_id=1352699276]
 y_sort_enabled = true
 
-[node name="player" parent="." unique_id=1312192759 groups=["player"] instance=ExtResource("1_yqjtg")]
-z_index = 0
-y_sort_enabled = true
-inventory = ExtResource("17_rysoc")
-
-[node name="Camera2D" type="Camera2D" parent="player" unique_id=1004921754]
-position = Vector2(8, 0)
-zoom = Vector2(3, 3)
-
 [node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=1635262361]
 
 [node name="InventoryUI" parent="CanvasLayer" unique_id=2316612 groups=["inventory_ui"] instance=ExtResource("10_vtaks")]
@@ -254,3 +244,8 @@ script = ExtResource("12_ir15t")
 [node name="WorldClock" type="Timer" parent="." unique_id=1495475248 groups=["world_clock"]]
 unique_name_in_owner = true
 script = ExtResource("13_kvuet")
+
+[node name="player" parent="." unique_id=1312192759 groups=["player"] instance=ExtResource("1_yqjtg")]
+
+[node name="Camera2D" type="Camera2D" parent="player" unique_id=328264310]
+zoom = Vector2(2, 2)

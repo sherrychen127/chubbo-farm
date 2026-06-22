@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://c1t4l463dy4y5"]
 
 [ext_resource type="Script" uid="uid://fet04inksqbx" path="res://scripts/slot_ui.gd" id="1_nfd3l"]
-[ext_resource type="Texture2D" uid="uid://dkjafc247mprv" path="res://assets/inventory-slot.png" id="2_aru5l"]
+[ext_resource type="Texture2D" uid="uid://dkjafc247mprv" path="res://assets/UI/inventory-slot.png" id="2_aru5l"]
 [ext_resource type="FontFile" uid="uid://4hdeb1akrtyt" path="res://assets/Fonts/CuteFantasy-5x9.ttf" id="3_aru5l"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_mkq7t"]
